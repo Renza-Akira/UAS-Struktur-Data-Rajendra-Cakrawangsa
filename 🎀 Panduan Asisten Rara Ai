@@ -1,0 +1,570 @@
+# RANGKUMAN PROJECT ASISTEN RARA AI BY RAJENDRA DEV
+
+* Note: Agar lebih stabil gunakan versi py 3.11
+
+==== Asisten Rara Ai Tidak Menggunakan Api Key ====
+* Sistem Menggunakan Ai Tradisional Basis Data!!
+
+## 1. Deskripsi Singkat
+
+Rara AI merupakan asisten digital berbasis Python yang dirancang untuk membantu berbagai aktivitas sehari-hari seperti pencarian informasi, pengelolaan data, penggunaan kamera, kalkulator, pembukaan website, Mini WhatsApp, dan berbagai fitur lainnya. Seluruh aktivitas pengguna disimpan dalam file CSV sebagai implementasi struktur data.
+
+Tema "Rara AI" dipilih karena memberikan kesan asisten virtual yang ramah, sopan, mudah digunakan, dan mampu berinteraksi seperti seorang asisten pribadi.
+
+---
+
+# 2. Library yang Digunakan
+
+Install seluruh library berikut:
+
+### Library bawaan Python
+
+* os
+* csv
+* random
+* subprocess
+* asyncio
+* webbrowser
+* time
+* datetime
+
+### Library tambahan
+
+```bash
+pip install opencv-python
+pip install colorama
+pip install edge-tts
+pip install wikipedia
+pip install pyttsx3
+pip install requests
+```
+
+Library yang digunakan:
+
+| Library    | Fungsi                                |
+| ---------- | ------------------------------------- |
+| cv2        | Kamera dan pengambilan foto           |
+| colorama   | Pewarnaan teks terminal               |
+| edge_tts   | Text To Speech suara Rara AI          |
+| wikipedia  | Pencarian informasi Wikipedia         |
+| webbrowser | Membuka website                       |
+| subprocess | Menjalankan aplikasi eksternal        |
+| csv        | Penyimpanan database                  |
+| datetime   | Waktu dan tanggal                     |
+| random     | Membuat respon acak                   |
+| asyncio    | Menjalankan voice secara asynchronous |
+
+---
+
+# 3. Database CSV yang Digunakan
+
+* chat.csv
+* youtube.csv
+* google.csv
+* instagram.csv
+* scholar.csv
+* roblox.csv
+* canva.csv
+* spotify.csv
+* wa.csv
+* boc.csv
+* browser.csv
+* kamera.csv
+* photo_db.csv
+* calculator.csv
+* waktu.csv
+* miniwa_chat.csv
+* users.csv
+* data.csv
+
+Semua aktivitas pengguna akan tersimpan pada database masing-masing.
+
+---
+
+# 4. Cara Menjalankan Program
+
+Masuk ke folder project:
+
+```bash
+cd lokasi_project
+```
+
+Jalankan program:
+
+```bash
+python Tools_asisten_AI.py
+```
+
+Program akan meminta nama pengguna:
+
+```text
+Nama kamu: rajendra
+```
+
+Kemudian Rara AI akan menyapa:
+
+```text
+🐰🌸 Rara AI:
+Halo rajendra... selamat datang tuan.
+Saya Rara, asisten digital yang siap membantu kapan saja.
+```
+
+---
+
+# 5. Sistem Waktu
+
+Perintah:
+
+```text
+jam
+```
+
+atau
+
+```text
+waktu
+```
+
+Contoh:
+
+```text
+rajendra: waktu
+```
+
+Output:
+
+```text
+Waktu saat ini menunjukkan kalender 2026-06-18 22:30:04.
+Setiap detik terus berjalan, membawa kita menuju cerita baru dalam hidup.
+```
+
+Data tersimpan pada:
+
+```text
+waktu.csv
+```
+
+---
+
+# 6. Sistem Kamera
+
+Perintah:
+
+```text
+kamera
+```
+
+Kamera akan aktif.
+
+* pada saat kamera aktif klik dulu di layar kamera nya supaya sensor kamera ke detect
+
+Petunjuk:
+
+* Tombol SPACE = mengambil foto.
+* Tombol ESC = menutup kamera.
+
+Foto akan disimpan ke folder:
+
+```text
+photos/
+```
+
+Informasi foto disimpan pada:
+
+```text
+photo_db.csv
+```
+
+Aktivitas kamera disimpan pada:
+
+```text
+kamera.csv
+```
+
+Berisi:
+
+* waktu membuka kamera
+* waktu menutup kamera
+* jumlah foto
+* durasi penggunaan
+
+---
+
+# 7. Sistem Kalkulator
+
+Perintah:
+
+```text
+tambah 10
+tambah 5
+kurang 2
+kali 3
+bagi 2
+hasil
+reset kalkulator
+```
+
+Contoh:
+
+```text
+rajendra: tambah 10
+rajendra: tambah 5
+rajendra: kurang 2
+rajendra: hasil
+```
+
+Output:
+
+```text
+Hasil perhitungan saat ini adalah 13
+```
+
+Riwayat tersimpan pada:
+
+```text
+calculator.csv
+```
+
+---
+
+# 8. Browser
+
+Perintah:
+
+```text
+browser
+```
+
+Membuka Google.
+
+Pencarian:
+
+```text
+browser struktur data python
+```
+
+Riwayat tersimpan di:
+
+```text
+browser.csv
+```
+
+---
+
+# 9. Google
+
+Perintah:
+
+```text
+google struktur data
+```
+
+Data tersimpan:
+
+```text
+google.csv
+```
+
+---
+
+# 10. YouTube
+
+Perintah:
+
+```text
+youtube naruto
+```
+
+Membuka hasil pencarian YouTube.
+
+Data tersimpan:
+
+```text
+youtube.csv
+```
+
+---
+
+# 11. Instagram
+
+Perintah:
+
+```text
+instagram cristiano
+```
+
+Membuka profil Instagram.
+
+Data tersimpan:
+
+```text
+instagram.csv
+```
+
+---
+
+# 12. Spotify
+
+Membuka Spotify:
+
+```text
+spotify
+```
+
+Mencari lagu:
+
+```text
+lagu beauty and a beat spotify
+```
+
+Data tersimpan:
+
+```text
+spotify.csv
+```
+
+---
+
+# 13. Roblox
+
+Perintah:
+
+```text
+roblox
+```
+
+atau
+
+```text
+roblox naruto
+```
+
+Data tersimpan:
+
+```text
+roblox.csv
+```
+
+---
+
+# 14. Canva
+
+Perintah:
+
+```text
+canva
+```
+
+Data tersimpan:
+
+```text
+canva.csv
+```
+
+---
+
+# 15. Google Scholar
+
+Perintah:
+
+```text
+scholar artificial intelligence
+```
+
+Data tersimpan:
+
+```text
+scholar.csv
+```
+
+---
+
+# 16. BOC UBP Karawang
+
+Perintah:
+
+```text
+boc
+```
+
+Membuka:
+
+```text
+https://elearning.ubpkarawang.ac.id/
+```
+
+Data tersimpan:
+
+```text
+boc.csv
+```
+
+---
+
+# 17. Mini WhatsApp
+
+Perintah:
+
+```text
+wa
+```
+
+Menu:
+
+1. Desktop
+2. Web
+3. Mini WA
+4. Kembali
+
+Mini WhatsApp memiliki:
+
+### Register
+
+Membuat akun baru.
+
+### Login
+
+Masuk ke akun.
+
+### Kirim Pesan
+
+Mengirim pesan ke pengguna lain.
+
+### Inbox
+
+Melihat pesan masuk.
+
+### Semua Chat
+
+Melihat seluruh chat.
+
+### Hapus Pesan
+
+Menghapus pesan berdasarkan ID.
+
+Database:
+
+```text
+users.csv
+miniwa_chat.csv
+```
+
+---
+
+# 18. Sistem Wikipedia
+
+Perintah:
+
+```text
+wiki naruto
+```
+
+atau
+
+```text
+wikipedia albert einstein
+```
+
+Fitur ini menggunakan library Wikipedia lokal.
+
+Jika koneksi internet aktif dan terjadi konflik pencarian, maka disarankan:
+
+1. Turn Off WiFi terlebih dahulu.
+2. Jalankan kembali perintah wiki.
+
+Contoh:
+
+```text
+wiki struktur data
+```
+
+Rara AI akan memberikan ringkasan informasi.
+
+---
+
+# 19. Refresh Database
+
+Perintah:
+
+```text
+refresh youtube
+refresh google
+refresh instagram
+refresh scholar
+refresh roblox
+refresh canva
+refresh wa
+refresh boc
+refresh chat
+refresh miniwa
+refresh data
+```
+
+Fungsi:
+
+Menghapus isi database namun tetap mempertahankan header CSV.
+
+---
+
+# 20. History Chat
+
+Perintah:
+
+```text
+lihat chat
+```
+
+Menghapus chat terakhir:
+
+```text
+hapus chat
+```
+
+Data disimpan pada:
+
+```text
+chat.csv
+```
+
+---
+
+# 21. Exit Program
+
+Perintah:
+
+```text
+exit
+```
+
+atau
+
+```text
+keluar
+```
+
+Rara AI akan mengucapkan:
+
+```text
+Sampai jumpa, semoga harimu selalu baik dan aku akan selalu siap saat kamu kembali.
+```
+
+---
+
+# 22. Struktur Data yang Digunakan
+
+Program ini mengimplementasikan:
+
+* List
+* Dictionary
+* CSV File
+* CRUD (Create, Read, Update, Delete)
+* Queue sederhana
+* Pencarian data
+* Penyimpanan history
+* Pengelolaan database
+
+---
+
+# 23. Kesimpulan
+
+Rara AI merupakan asisten virtual berbasis Python yang memanfaatkan berbagai struktur data dan file CSV sebagai media penyimpanan. Sistem ini mampu membantu pengguna dalam melakukan pencarian informasi, pengelolaan file, penggunaan kamera, kalkulator, Mini WhatsApp, serta berbagai layanan berbasis web dengan antarmuka sederhana dan suara interaktif sehingga menyerupai asisten digital pribadi.
