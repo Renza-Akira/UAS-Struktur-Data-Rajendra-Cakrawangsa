@@ -1,0 +1,147 @@
+RANGKUMAN DAN PENJELASAN PROGRAM MINI WHATSAPP BERBASIS PYTHON DAN CSV
+
+Rangkuman Program
+
+Mini WhatsApp merupakan aplikasi sederhana berbasis Python yang dirancang untuk mensimulasikan sistem pengiriman pesan seperti WhatsApp. Program ini memungkinkan pengguna untuk membuat akun, melakukan login, mengirim pesan kepada pengguna lain, melihat pesan masuk, melihat seluruh riwayat chat, menghapus pesan berdasarkan ID, melakukan logout, dan keluar dari program. Semua data disimpan dalam file CSV sehingga data tetap tersedia walaupun program telah ditutup.
+
+Komponen Program
+
+1. File users.csv
+
+File users.csv digunakan untuk menyimpan data akun pengguna yang telah melakukan registrasi. Data yang disimpan berupa username dan password.
+
+Fungsi:
+
+* Menyimpan informasi akun pengguna.
+* Digunakan saat proses login.
+* Menjaga agar data akun tidak hilang ketika program ditutup.
+
+2. File chat.csv
+
+File chat.csv digunakan untuk menyimpan seluruh pesan yang dikirim oleh pengguna.
+
+Data yang disimpan meliputi:
+
+* ID pesan.
+* Nama pengirim.
+* Nama penerima.
+* Isi pesan.
+* Waktu pengiriman.
+
+Fungsi:
+
+* Menyimpan riwayat percakapan.
+* Menampilkan inbox pengguna.
+* Menampilkan seluruh riwayat chat.
+* Memudahkan proses penghapusan pesan.
+
+Struktur Data yang Digunakan
+
+1. List
+
+List digunakan untuk menyimpan kumpulan data sementara yang dibaca dari file CSV.
+
+Fungsi:
+
+* Menyimpan data pesan sementara.
+* Membantu proses penghapusan pesan.
+* Menentukan ID pesan baru.
+
+2. Dictionary
+
+Dictionary digunakan ketika data dibaca menggunakan DictReader. Setiap data dapat diakses berdasarkan nama kolom seperti sender, receiver, message, dan time.
+
+Fungsi:
+
+* Mempermudah pengambilan data.
+* Membuat program lebih mudah dipahami.
+* Memudahkan pencarian data.
+
+3. File CSV
+
+CSV digunakan sebagai media penyimpanan permanen.
+
+Fungsi:
+
+* Menyimpan akun pengguna.
+* Menyimpan seluruh pesan.
+* Memastikan data tetap tersedia setelah program ditutup.
+
+4. Percabangan (If-Elif-Else)
+
+Percabangan digunakan untuk menentukan menu yang dipilih pengguna.
+
+Fungsi:
+
+* Menjalankan perintah sesuai pilihan.
+* Memeriksa keberhasilan login.
+* Menampilkan pesan kesalahan jika input tidak valid.
+
+5. Perulangan (While)
+
+Perulangan digunakan agar program dapat berjalan terus sampai pengguna memilih keluar.
+
+Fungsi:
+
+* Menampilkan menu secara berulang.
+* Memungkinkan pengguna melakukan beberapa aktivitas tanpa menjalankan program dari awal.
+
+6. Fungsi (Function)
+
+Program dibagi menjadi beberapa fungsi seperti:
+
+* init_files()
+* register()
+* login()
+* send_message()
+* inbox()
+* all_chat()
+* delete_message()
+* menu()
+* main()
+
+Fungsi-fungsi tersebut membuat program lebih terstruktur dan mudah dikembangkan.
+
+Tata Cara Penggunaan Program
+
+1. Menjalankan Program
+
+Pengguna menjalankan program Mini WhatsApp sehingga muncul menu utama.
+
+2. Registrasi Akun
+
+Pengguna memilih menu Register, kemudian memasukkan username dan password. Data tersebut akan disimpan ke dalam file users.csv.
+
+3. Login
+
+Pengguna memilih menu Login dan memasukkan username serta password. Jika data sesuai, pengguna berhasil masuk ke sistem.
+
+4. Mengirim Pesan
+
+Pengguna memilih menu Kirim Pesan, kemudian memasukkan nama penerima dan isi pesan. Pesan akan disimpan ke dalam file chat.csv.
+
+5. Melihat Inbox
+
+Pengguna memilih menu Inbox untuk melihat seluruh pesan yang diterima.
+
+6. Melihat Semua Chat
+
+Pengguna memilih menu Semua Chat untuk melihat seluruh riwayat percakapan yang tersimpan.
+
+7. Menghapus Pesan
+
+Pengguna memasukkan ID pesan yang ingin dihapus. Program akan menghapus data tersebut dari file chat.csv.
+
+8. Logout
+
+Pengguna memilih menu Logout untuk keluar dari akun dan kembali ke menu login.
+
+9. Keluar Program
+
+Pengguna memilih menu Keluar untuk menghentikan program. Program akan menampilkan pesan:
+
+"Terima kasih telah menggunakan Mini WhatsApp. Sampai jumpa lagi."
+
+Kesimpulan
+
+Mini WhatsApp merupakan implementasi sederhana dari konsep struktur data menggunakan Python. Struktur data yang digunakan meliputi list, dictionary, file CSV, percabangan, perulangan, dan fungsi. Program ini mampu melakukan pengelolaan data seperti menambah, membaca, dan menghapus data pesan. Oleh karena itu, Mini WhatsApp dapat dijadikan sebagai contoh penerapan struktur data dalam kehidupan sehari-hari serta sebagai dasar pengembangan aplikasi chat yang lebih kompleks.
